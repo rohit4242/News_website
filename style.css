@@ -85,9 +85,11 @@ header .container{
 }
 
 .logo img {
-  width: 40px;
+  width: 180px;
   margin-right: 0.6rem;
   margin-top: -0.6rem;
+  background-color: var(--hoverColor);
+  border-radius: 5px;
 }
 
 .links ul {
