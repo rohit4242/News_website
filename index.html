@@ -1,49 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Website</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main>
-      <div class="big-wrapper light">
-        <header>
-          <div class="container">
-            <div class="logo">
-              <img src="./img/Divas.png" alt="Logo" />
-            </div>
-            <div class="links">
-              <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </div>
 
-            <div class="overlay"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News Website</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-            <div class="hamburger-menu">
-              <div class="bar"></div>
-            </div>
+<body>
+  <main>
+    <div class="big-wrapper light">
+      <header>
+        <div class="container">
+          <div class="logo">
+            <img src="./img/Divas.png" alt="Logo" />
           </div>
-        </header>
+          <div class="links">
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
 
-        <div class="bottom-area">
-          <div class="container">
-            <button class="toggle-btn">
-              <i class="far fa-moon"></i>
-              <i class="far fa-sun"></i>
-            </button>
+          <div class="overlay"></div>
+
+          <div class="hamburger-menu">
+            <div class="bar"></div>
           </div>
         </div>
+      </header>
+
+      <section>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </section>
+
+      <div class="bottom-area">
+        <div class="container">
+          <button class="toggle-btn">
+            <i class="far fa-moon"></i>
+            <i class="far fa-sun"></i>
+          </button>
+        </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <!-- JavaScript Files -->
 
-    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-    <script src="./app.js"></script>
-  </body>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  <script src="./app.js"></script>
+  <!-- Initialize Swiper -->
+
+</body>
+
 </html>
